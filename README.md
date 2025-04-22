@@ -1,16 +1,10 @@
 ## ic-burn
 
-ic-burn is a sample project to port rust's burn library to IC. It uses IC's random number API raw_rand instead of burn's getrandom.
+ic-burn is a sample project to port rust's burn library to IC. 
+
+It uses IC's random number API raw_rand instead of burn's getrandom.
+
 Train an LSTM (Long Short-Term Memory) model and reason about the corresponding price through the Coin ICP price history in 2024.
-
-If you want to start working on your project right away, you might want to try the following commands:
-
-```bash
-cd burn_price/
-dfx help
-dfx canister --help
-```
-
 
 ## Prerequisites
 Rust: Version 1.85.0.
@@ -26,7 +20,7 @@ npm i
 dfx deploy
 ```
 ## Useage
-1. Must upload /assets/icp_history_price_2024.json via the front-end on the first run, otherwise there is no data.
+1. Must upload `/assets/icp_history_price_2024.json` via the front-end on the first run, otherwise there is no data for train or predict.
 
 2. The following `train` method must be executed for the first run, otherwise model initialization is not possible
 ```bash

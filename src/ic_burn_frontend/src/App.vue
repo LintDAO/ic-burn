@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Upload JSON to ICP Canister</h1>
+    <h1>Upload JSON to IC-BURN Canister</h1>
     <input type="file" accept=".json" @change="handleFileChange" />
     <button @click="uploadFile" :disabled="!file">Upload</button>
     <p v-if="message">{{ message }}</p>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { ic_burn_backend } from "declarations/ic_burn_backend"; // 导入 canister 接口
+import { ic_burn_backend } from "declarations/ic_burn_backend"; 
 
 export default {
   name: "App",
