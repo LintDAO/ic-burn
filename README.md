@@ -33,7 +33,6 @@ Show:
 2025-04-18 07:40:02.643838571 UTC: [Canister bkyz2-fmaaa-aaaaa-qaaaq-cai] Epoch 3: Loss = 0.07831413
 2025-04-18 07:40:02.643838571 UTC: [Canister bkyz2-fmaaa-aaaaa-qaaaq-cai] Epoch 4: Loss = 0.07810363
 2025-04-18 07:40:02.643838571 UTC: [Canister bkyz2-fmaaa-aaaaa-qaaaq-cai] Epoch 5: Loss = 0.07789419
-2025-04-18 07:40:02.643838571 UTC: [Canister bkyz2-fmaaa-aaaaa-qaaaq-cai] Train consumed 4134426 cycle
 ```
 
 3. Run predict

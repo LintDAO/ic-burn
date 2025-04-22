@@ -66,7 +66,6 @@ fn init() {
 
 #[update]
 async fn refill_random_buffer(count: u32) {
-    let initial_cycles = ic_cdk::api::canister_balance();
     for _ in 0..count {
         let random_bytes = raw_rand()
             .await
@@ -78,7 +77,6 @@ async fn refill_random_buffer(count: u32) {
         });
     }
     ic_cdk::println!("Refilled RANDOM_BUFFER with {} bytes", count * 32);
-    ic_cdk::println!("refill_random_buffer consumed {} cycles", initial_cycles - ic_cdk::api::canister_balance());
 }
 
 
@@ -128,7 +126,6 @@ fn add_price(data: PriceData) {
 
 #[update]
 async fn train(epochs: u64) {
-    let initial_cycles = ic_cdk::api::canister_balance();
     ic_cdk::println!("init {} cycles", initial_cycles);
     // 检查并填充 RANDOM_BUFFER
     let needs_fill = RANDOM_BUFFER.with(|buffer| buffer.borrow().len() < 32);
@@ -162,8 +159,6 @@ async fn train(epochs: u64) {
     state.weights = Some(model.get_weights().val().into_data().to_vec().unwrap());
     state.bias = Some(model.get_bias().unwrap().val().into_data().to_vec().unwrap());
     storage::stable_save((state,)).unwrap();
-    ic_cdk::println!("Train consumed {} cycles", initial_cycles - ic_cdk::api::canister_balance());
-    ic_cdk::println!("Trained {} cycles", ic_cdk::api::canister_balance());
 }
 
 #[query]
