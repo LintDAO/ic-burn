@@ -4,7 +4,7 @@ ic-burn is a sample project to port rust's burn library to IC.
 
 It uses IC's random number API raw_rand instead of burn's getrandom.
 
-Train an LSTM (Long Short-Term Memory) model and reason about the corresponding price through the Coin ICP price history in 2024.
+Train an LSTM (Long Short-Term Memory) model and reason about the corresponding price through the Binance ICP price history in 2024.
 
 ## Prerequisites
 Rust: Version 1.85.0.
